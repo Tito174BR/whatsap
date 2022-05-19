@@ -1,0 +1,21 @@
+{
+  "name": "direto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "Venom-bot",
+    "Chatbot",
+    "Whatsapp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "venom-bot": "^4.0.5"
+  }
+}
