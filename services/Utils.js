@@ -9,7 +9,7 @@ class Message{              //Guarda utilidades da mensagem recebida
         this.positive = (['sim', 'ok', 'certo', 'beleza', 'concordo'].some((x) => this.wrds.includes(x)) || 
              this.wrds.includes('tudo') && this.wrds.includes('bem')) &&
              !this.wrds.includes('nao')
-        this.negative = (['nao', 'discordo', 'errado'].some((x) => this.wrds.includes(x))) &&
+        this.negative = (['nao', 'não', 'discordo', 'errado'].some((x) => this.wrds.includes(x))) &&
             !this.wrds.includes('sim')
         this.data = ''
     }
@@ -105,6 +105,7 @@ class DataBase{                 //Guarda todos os usuários
 
     newMessage(msg, id, first=false){
         let stuff = this.chatManag(id).newMessage(msg, this.users[id].data, first)
+        console.log(stuff)
         switch(stuff.act){
             case 'set-usertype-cpf':
                 this.users[id].type = 'cpf'

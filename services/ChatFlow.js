@@ -35,6 +35,7 @@ class ChatFlow{     //Guarda todo o fluxo
     lastStepId(arr){
         let lastBlock = this.chatBlocks[this.chatBlocks[arr[0]].comesFrom]
         return arr[1]==0?[lastBlock.id, lastBlock.steps[lastBlock.steps.length-1].id]:
+        console.log(lastBlock)
             [arr[0], this.currentStep(arr).comesFrom]
     }
 
@@ -136,6 +137,7 @@ class ChatManager{  //Cada usuário contém uma instância do manager, para faci
     goNext(){       //Avança para o próximo step
         this.id = chat.nextStepId(this.id)
         this.refStep()
+        console.log("passou daqui")
     }
 
     goBack(){       //Retorna para o step anterior
@@ -168,7 +170,9 @@ class ChatManager{  //Cada usuário contém uma instância do manager, para faci
         let actions = this.fullActions(this.step.actions, msg)
         this.goNext()
         this.refStep()
+        console.log("Da uma olhada aqui")
         return {msg: this.replaceTags(this.step.msgs, data), act:actions, type:this.dataType}
+
     }
 
     onDefaultAns(tag, data){  //Ações para um step que foi default

@@ -6,7 +6,7 @@ var data = new DataBase()
 
 create({
    session: 'Direto',
-   multidevice: true
+   // multidevice: true
 }).then((client) => start(client)).catch((err) => {
    console.error("Deu erro aqui",err);
 })
@@ -23,10 +23,11 @@ async function start(client) {
          if (TextSender.notText(message, id, client)) {
             return
          }
-         TextSender.delivText(data.newMessage(new Message(message.body, message.type), id), id, client)
+         TextSender.delivText(data.newMessage(new Message(message.body, message.type), id, false), client)
+         
       } catch (err) {
          console.log("Deu erro aqui tambem ", err);
-         console.log(message.body)
+         console.log("escopo ", message.body)
       }
    });
 }

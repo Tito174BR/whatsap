@@ -7,7 +7,7 @@ textkeep.welcome = ['Olá! Sou um bot programado para auxiliar o processo de cad
     'Vejo que seu contato não está salvo no meu banco de dados.', 
     'Você gostaria de fazer seu cadastro']
 
-defaultans.welcome = ['Caso queria realizar um novo cadastrp, basta me enviar um "sim" ou ' +
+defaultans.welcome = ['Caso queria realizar um novo cadastro, basta me enviar um "sim" ou ' +
     '"Quero realizar um novo cadastro" a qualquer momento.']
 
 
@@ -15,16 +15,16 @@ defaultans.welcome = ['Caso queria realizar um novo cadastrp, basta me enviar um
 textkeep.baseinfo = [
     ['Tudo bem... Vou precisar de algumas informações suas agora.',                             //1.0
     'Primeiramente eu vou requisitando cada uma em ordem e você vai me enviando.',
-    'Por favor, me informe o nome completo do aluno que fará a matrícula.'], 
+    'Por favor, me informe o nome fantasia da empresa que sera cadastrada'], 
     ['Seu nome completo é ~nome~.', 'Você confirma?'],                                          //1.1
-    ['Certo, agora preciso do CPF do aluno.'], 
+    ['Certo, agora preciso do CPF do usuario.'], 
     ['O CPF é ~cpf~. Você confirma?'],                                                          //1.2
     ['Agora me informe a data de nascimento.', 'Só me enviar no formato dia/mes/ano'],          //1.3
     ['Sua data de nascimento é ~datanas~. Você confirma?'],                                     //1.4
     ['Tudo certo! O programa acaba aqui por enquanto.']]                                     
 
-defaultans.baseinfo = [[['Ok! Só enviar o seu nome completo.'],                                 //1.0       
-    ['Por favor, me envie o nome completo do aluno para que possamos prosseguir com o processo.'], 
+defaultans.baseinfo = [[['Ok! Só enviar o seu nome fantasia.'],                                 //1.0       
+    ['Por favor, me envie o nome fantasia da empresa para que possamos prosseguir com o processo.'], 
     ['Você poderia rever o nome enviado?', 'Apesar de eu ter pedido o seu nome completo' +
     ', você me enviou apenas uma palavra.']], 
     [['Certo, você poderia me envia o nome correto agora?']],                                   //1.1
